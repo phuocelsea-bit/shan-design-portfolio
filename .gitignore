@@ -1,5 +1,7 @@
 node_modules/
 exports/
 fetched.html
+public-url.txt
+public-url-error.txt
 Thumbs.db
 .DS_Store
