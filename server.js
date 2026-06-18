@@ -23,18 +23,59 @@ const server = http.createServer((req, res) => {
   const safePath = path.normalize(urlPath).replace(/^(\.\.[/\\])+/, "");
   const filePath = path.join(root, safePath);
 
-  fs.readFile(filePath, (err, data) => {
-    if (err) {
+  fs.stat(filePath, (err, stats) => {
+    if (err || !stats.isFile()) {
       res.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("Not found");
       return;
     }
 
     const ext = path.extname(filePath).toLowerCase();
+    const contentType = contentTypes[ext] || "application/octet-stream";
+    const range = req.headers.range;
+
+    if (ext === ".mp4" && range) {
+      const match = /bytes=(\d*)-(\d*)/.exec(range);
+
+      if (!match) {
+        res.writeHead(416, {
+          "Content-Range": `bytes */${stats.size}`
+        });
+        res.end();
+        return;
+      }
+
+      const start = match[1] ? parseInt(match[1], 10) : 0;
+      const end = match[2] ? parseInt(match[2], 10) : stats.size - 1;
+
+      if (Number.isNaN(start) || Number.isNaN(end) || start > end || end >= stats.size) {
+        res.writeHead(416, {
+          "Content-Range": `bytes */${stats.size}`
+        });
+        res.end();
+        return;
+      }
+
+      res.writeHead(206, {
+        "Content-Type": contentType,
+        "Content-Length": end - start + 1,
+        "Content-Range": `bytes ${start}-${end}/${stats.size}`,
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "no-cache"
+      });
+
+      fs.createReadStream(filePath, { start, end }).pipe(res);
+      return;
+    }
+
     res.writeHead(200, {
-      "Content-Type": contentTypes[ext] || "application/octet-stream"
+      "Content-Type": contentType,
+      "Content-Length": stats.size,
+      "Accept-Ranges": ext === ".mp4" ? "bytes" : "none",
+      "Cache-Control": "no-cache"
     });
-    res.end(data);
+
+    fs.createReadStream(filePath).pipe(res);
   });
 });
 

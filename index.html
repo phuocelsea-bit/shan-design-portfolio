@@ -573,6 +573,7 @@
         width: 100%;
         height: auto;
         background: #000;
+        object-fit: contain;
       }
 
       .video-card__meta {
@@ -758,6 +759,34 @@
         border-radius: 24px;
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .skill-card__demo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .skill-card__demo-split {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .skill-card__demo-flow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 8px 0;
+      }
+
+      .flow-line {
+        flex: 1;
+        height: 2px;
+        min-width: 36px;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
       }
 
       .skill-card__tags {
@@ -1233,6 +1262,10 @@
           font-size: clamp(3rem, 14vw, 5rem);
         }
 
+        .hero__title-line {
+          white-space: normal;
+        }
+
         .gallery-card {
           width: 320px;
           height: 210px;
@@ -1270,18 +1303,432 @@
           display: none;
         }
 
-        .hero-card {
-          min-height: 520px;
+        .site-header__inner {
+          gap: 12px;
+          padding: 12px 0 14px;
         }
 
-        .hero-card__image,
-        .about-card img {
+        .brand {
+          gap: 8px;
+        }
+
+        .brand-mark {
+          width: 34px;
+          height: 34px;
+          border-radius: 12px;
+          font-size: 0.88rem;
+        }
+
+        .brand-copy strong {
+          font-size: 0.92rem;
+          letter-spacing: -0.01em;
+        }
+
+        .brand-copy span {
+          font-size: 0.58rem;
+        }
+
+        .header-actions {
+          width: 100%;
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .theme-button {
+          width: 40px;
+          height: 40px;
+        }
+
+        .cta-button {
+          padding: 11px 15px;
+          font-size: 0.84rem;
+          border-radius: 14px;
+        }
+
+        .nav {
+          gap: 2px;
+          padding: 4px;
+        }
+
+        .nav a {
+          padding: 9px 12px;
+          font-size: 0.82rem;
+          white-space: nowrap;
+        }
+
+        main {
+          padding-top: 176px;
+        }
+
+        .section-shell {
+          padding: 0 2px;
+        }
+
+        .hero {
+          min-height: auto;
+          align-items: flex-start;
+          padding-bottom: 18px;
+        }
+
+        .hero__layout {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .hero__left {
+          max-width: 100%;
+        }
+
+        .hero__title {
+          margin-top: 18px;
+          max-width: 8.8ch;
+          font-size: clamp(2.15rem, 8.7vw, 3.25rem);
+          line-height: 1.14;
+          letter-spacing: -0.01em;
+        }
+
+        .hero__title-line {
+          display: inline;
+          white-space: normal;
+        }
+
+        .hero__title .accent {
+          display: inline;
+          margin: 0;
+        }
+
+        .hero__lead {
+          margin-top: 18px;
+          max-width: 100%;
+          font-size: 0.94rem;
+          line-height: 1.72;
+        }
+
+        .hero__buttons {
+          gap: 12px;
+        }
+
+        .button-primary,
+        .button-secondary {
+          width: 100%;
+          padding: 14px 18px;
+          font-size: 0.9rem;
+        }
+
+        .hero__facts {
+          gap: 8px;
+          margin-top: 22px;
+          padding-top: 18px;
+          font-size: 0.88rem;
+        }
+
+        .hero-card {
+          width: 100%;
           min-height: 0;
+          padding: 12px;
+          border-radius: 26px;
+        }
+
+        .hero-card__image {
+          min-height: 340px;
+          border-radius: 20px;
+        }
+
+        .hero-card__star {
+          top: 34px;
+          right: 24px;
+          width: 22px;
+          height: 22px;
+        }
+
+        .hero-card__status {
+          left: 14px;
+          right: 14px;
+          bottom: 14px;
+          padding: 12px 14px;
+          font-size: 0.82rem;
+        }
+
+        .strip {
+          padding: 18px 0 8px;
+        }
+
+        .strip__title {
+          margin-bottom: 16px;
+          font-size: 0.7rem;
+          letter-spacing: 0.12em;
+        }
+
+        .tool-card {
+          width: 92px;
+          flex-basis: 92px;
+          padding: 11px 8px 10px;
+          border-radius: 18px;
+        }
+
+        .tool-card__icon {
+          height: 46px;
+        }
+
+        .tool-card__icon img {
+          max-width: 38px;
+          max-height: 38px;
+        }
+
+        .tool-card__name {
+          font-size: 0.72rem;
+        }
+
+        .gallery-section {
+          padding: 30px 0 18px;
         }
 
         .section-head {
+          margin-bottom: 18px;
+        }
+
+        .section-head h2,
+        .resume-block h2,
+        .skills-intro h2,
+        .about-copy h2,
+        .contact-hero h2 {
+          font-size: clamp(2rem, 8.4vw, 2.9rem) !important;
+          line-height: 1.14;
+          letter-spacing: -0.01em;
+        }
+
+        .section-head span {
+          font-size: 0.72rem;
+          letter-spacing: 0.14em;
+        }
+
+        .gallery-row__track {
+          gap: 12px;
+        }
+
+        .gallery-card {
+          width: 68vw;
+          height: 160px;
+          flex-basis: 68vw;
+          border-radius: 20px;
+        }
+
+        .gallery-card--tall {
+          height: 196px;
+        }
+
+        .video-section {
+          padding: 22px 0 18px;
+        }
+
+        .video-grid {
+          gap: 14px;
+        }
+
+        .video-card {
+          padding: 10px;
+          border-radius: 20px;
+        }
+
+        .video-card__media {
+          border-radius: 16px;
+        }
+
+        .video-card__media video {
+          max-height: 72vh;
+        }
+
+        .video-card__meta {
+          padding: 9px 11px;
+          margin-top: 9px;
+        }
+
+        .resume-section,
+        .skills-section,
+        .about-section,
+        .contact-section {
+          padding-top: 26px;
+          padding-bottom: 20px;
+        }
+
+        .resume-card {
+          padding: 18px 15px 17px;
+          border-radius: 22px;
+        }
+
+        .resume-card__top h3 {
+          font-size: 1.42rem;
+        }
+
+        .resume-card__top p,
+        .resume-list,
+        .skills-intro p,
+        .skill-card p,
+        .about-copy p,
+        .about-quote,
+        .contact-hero p,
+        .contact-card p {
+          font-size: 0.94rem;
+        }
+
+        .resume-card__period {
+          font-size: 0.82rem;
+          letter-spacing: 0.08em;
+        }
+
+        .skills-grid {
+          gap: 16px;
+          margin-top: 20px;
+        }
+
+        .skill-card {
+          padding: 16px 13px;
+          border-radius: 22px;
+        }
+
+        .skill-card h3 {
+          font-size: 1.45rem;
+        }
+
+        .skill-card__demo {
+          margin-top: 16px;
+          padding: 12px;
+          border-radius: 16px;
+        }
+
+        .skill-card__demo-grid,
+        .skill-card__demo-split {
+          grid-template-columns: 1fr;
+        }
+
+        .skill-card__demo-flow {
           flex-direction: column;
-          align-items: flex-start;
+          align-items: stretch;
+          gap: 10px;
+        }
+
+        .flow-line {
+          width: 100%;
+          min-width: 0;
+        }
+
+        .skill-card__tags {
+          gap: 8px;
+          margin-top: 16px;
+        }
+
+        .skill-card__tags span {
+          padding: 8px 10px;
+          font-size: 0.76rem;
+        }
+
+        .about-grid {
+          gap: 26px;
+        }
+
+        .about-quote {
+          margin-top: 18px;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-top: 20px;
+        }
+
+        .about-card {
+          min-height: 0;
+          padding: 10px;
+          border-radius: 24px;
+        }
+
+        .about-card img {
+          min-height: 320px;
+          border-radius: 18px;
+        }
+
+        .about-card__status {
+          left: 14px;
+          right: 14px;
+          bottom: 14px;
+          padding: 12px 14px;
+          border-radius: 18px;
+        }
+
+        .tool-badges {
+          margin-top: 24px;
+          padding-top: 18px;
+        }
+
+        .tool-badges__list {
+          gap: 8px;
+        }
+
+        .tool-badges__list span {
+          padding: 10px 12px;
+          font-size: 0.82rem;
+        }
+
+        .contact-hero {
+          margin-bottom: 24px;
+        }
+
+        .contact-shell {
+          gap: 22px;
+          padding: 18px 14px;
+          border-radius: 22px;
+        }
+
+        .contact-card h3 {
+          font-size: 1.62rem;
+        }
+
+        .contact-list {
+          gap: 10px;
+          margin-top: 18px;
+        }
+
+        .contact-item strong {
+          font-size: 1rem;
+        }
+
+        .socials {
+          margin-top: 24px;
+          padding-top: 18px;
+        }
+
+        .socials__list {
+          gap: 8px;
+        }
+
+        .socials__list a {
+          padding: 10px 12px;
+          font-size: 0.88rem;
+        }
+
+        .field input,
+        .field textarea {
+          padding: 14px 15px;
+          border-radius: 14px;
+        }
+
+        .choice {
+          padding: 14px 12px;
+          border-radius: 14px;
+          font-size: 0.9rem;
+        }
+
+        .submit {
+          padding: 16px 20px;
+          border-radius: 16px;
+        }
+
+        .site-footer {
+          padding: 22px 0 34px;
+        }
+
+        .site-footer__inner {
+          font-size: 0.82rem;
         }
       }
     </style>
@@ -1451,7 +1898,7 @@
             <div class="video-grid">
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/videos/video-1.mp4" controls preload="metadata" playsinline></video>
+                  <video src="./assets/videos/video-1.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>01</strong>
@@ -1460,7 +1907,7 @@
               </article>
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/videos/video-2.mp4" controls preload="metadata" playsinline></video>
+                  <video src="./assets/videos/video-2.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>02</strong>
@@ -1469,7 +1916,7 @@
               </article>
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/videos/video-3.mp4" controls preload="metadata" playsinline></video>
+                  <video src="./assets/videos/video-3.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>03</strong>
@@ -1578,7 +2025,7 @@
                   不仅使用AI工具进行视觉创作，更专注于AI内容生产流程优化与自动化工作流搭建。熟悉Agent协作，运用GPT-Image、Codex及智能体工作流完成创意策划、视觉生成与内容优化。能够构建可复用的生产流程，实现从需求到成品的高效交付与规模化产出。同时具备AI视频内容生产能力，可将静态商品视觉延展为广告短片、产品演示及营销视频，实现图文与视频内容的一体化生产。
                 </p>
                 <div class="skill-card__demo">
-                  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;">
+                  <div class="skill-card__demo-grid">
                     <div style="padding:18px 16px;border-radius:18px;background:var(--accent);color:#000;font-weight:900;text-align:center;">GPT-image2/工作流 高精生成</div>
                     <div style="padding:18px 16px;border-radius:18px;background:rgba(255,255,255,0.04);color:#a1a1aa;font-weight:800;text-align:center;">Liblib AI 风格控制</div>
                   </div>
@@ -1606,7 +2053,7 @@
                     <span>Octane Live Viewer 实时渲染预览</span>
                     <span style="color:#71717a;">60 fps 视差对齐</span>
                   </div>
-                  <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:10px;margin-top:14px;">
+                  <div class="skill-card__demo-split">
                     <div style="padding:18px;border-radius:18px;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);text-align:center;">
                       <div style="color:#71717a;font-size:0.82rem;">反射折射</div>
                       <div style="margin-top:6px;font-size:1.5rem;font-weight:900;">1.52</div>
@@ -1662,11 +2109,11 @@
                   不仅能设计单一的主图，更能够独立承接产品前期策划、外景拍摄、模型搭建、中后期精修合成，以及产品营销视频剪辑的全周期、端到端出街交付。
                 </p>
                 <div class="skill-card__demo">
-                  <div style="display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 0;">
+                  <div class="skill-card__demo-flow">
                     <div style="padding:14px 18px;border-radius:14px;background:#111;border:1px solid rgba(255,255,255,0.06);color:#a1a1aa;">创意策划</div>
-                    <div style="flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);"></div>
+                    <div class="flow-line"></div>
                     <div style="padding:14px 18px;border-radius:14px;background:#111;border:1px solid rgba(163,230,53,0.35);color:var(--accent);">C4D / AI 制作</div>
-                    <div style="flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);"></div>
+                    <div class="flow-line"></div>
                     <div style="padding:14px 18px;border-radius:14px;background:var(--accent);color:#000;font-weight:900;">高价值交付</div>
                   </div>
                 </div>
