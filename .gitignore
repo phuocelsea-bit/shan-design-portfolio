@@ -1,0 +1,5 @@
+node_modules/
+exports/
+fetched.html
+Thumbs.db
+.DS_Store
