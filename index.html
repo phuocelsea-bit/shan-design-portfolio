@@ -845,7 +845,7 @@
         display: grid;
         grid-template-columns: minmax(0, 1.1fr) minmax(380px, 0.9fr);
         gap: 48px;
-        align-items: center;
+        align-items: start;
       }
 
       .about-copy h2 {
@@ -917,6 +917,7 @@
 
       .about-card {
         position: relative;
+        margin-top: 55px;
         min-height: 720px;
         padding: 16px;
         border-radius: 40px;
@@ -1259,6 +1260,10 @@
         .hero-card {
           max-width: 520px;
           margin: 0 auto;
+        }
+
+        .about-card {
+          margin-top: 0;
         }
 
         .video-grid,
