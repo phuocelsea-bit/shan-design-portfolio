@@ -1304,45 +1304,55 @@
         }
 
         .site-header__inner {
-          gap: 12px;
+          gap: 10px 8px;
           padding: 12px 0 14px;
+          justify-content: space-between;
         }
 
         .brand {
-          gap: 8px;
+          min-width: 0;
+          flex: 1 1 auto;
+          gap: 7px;
         }
 
         .brand-mark {
-          width: 34px;
-          height: 34px;
-          border-radius: 12px;
-          font-size: 0.88rem;
+          width: 30px;
+          height: 30px;
+          flex: 0 0 30px;
+          border-radius: 10px;
+          font-size: 0.78rem;
         }
 
         .brand-copy strong {
-          font-size: 0.92rem;
+          font-size: 0.82rem;
           letter-spacing: -0.01em;
+          white-space: nowrap;
         }
 
         .brand-copy span {
-          font-size: 0.58rem;
+          font-size: 0.52rem;
+          white-space: nowrap;
         }
 
         .header-actions {
-          width: 100%;
-          justify-content: center;
-          gap: 10px;
+          width: auto;
+          flex: 0 0 auto;
+          justify-content: flex-end;
+          gap: 6px;
         }
 
         .theme-button {
-          width: 40px;
-          height: 40px;
+          width: 34px;
+          height: 34px;
+          flex: 0 0 34px;
+          border-radius: 12px;
         }
 
         .cta-button {
-          padding: 11px 15px;
-          font-size: 0.84rem;
-          border-radius: 14px;
+          padding: 9px 10px;
+          font-size: 0.7rem;
+          border-radius: 12px;
+          white-space: nowrap;
         }
 
         .nav {
@@ -1443,7 +1453,7 @@
           grid-column: 2;
           grid-row: 2;
           width: 100%;
-          align-self: stretch;
+          align-self: center;
         }
 
         .hero-card-wrap .orbit,
@@ -1454,7 +1464,7 @@
 
         .hero-card {
           width: 100%;
-          height: 100%;
+          height: auto;
           min-height: 0;
           padding: 5px;
           border-radius: 20px;
@@ -1463,10 +1473,11 @@
 
         .hero-card__image {
           display: block;
-          height: clamp(220px, 60vw, 300px);
+          height: auto;
           min-height: 0;
           border-radius: 15px;
-          object-position: 52% top;
+          object-fit: contain;
+          object-position: center;
         }
 
         .strip {
