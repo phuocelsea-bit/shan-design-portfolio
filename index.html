@@ -1399,7 +1399,7 @@
         }
 
         main {
-          padding-top: 176px;
+          padding-top: 126px;
         }
 
         .section-shell {
@@ -1414,7 +1414,7 @@
 
         .hero__layout {
           grid-template-columns: minmax(0, 1.18fr) minmax(118px, 0.82fr);
-          gap: 18px 14px;
+          gap: 10px 14px;
           align-items: start;
         }
 
@@ -1423,20 +1423,26 @@
         }
 
         .hero__left > .eyebrow {
-          grid-column: 1 / -1;
+          grid-column: 1;
           grid-row: 1;
           justify-self: start;
+          max-width: 100%;
+          padding: 7px 10px;
+          font-size: 0.62rem;
+          line-height: 1.35;
+          letter-spacing: 0.02em;
         }
 
         .hero__title {
           grid-column: 1;
           grid-row: 2;
-          align-self: center;
+          align-self: start;
           margin: 0;
+          padding-top: 7px;
           max-width: none;
           font-size: clamp(1.48rem, 6.15vw, 2.05rem);
-          line-height: 1.13;
-          letter-spacing: -0.01em;
+          line-height: 1.2;
+          letter-spacing: 0.025em;
         }
 
         .hero__title-line {
@@ -1488,9 +1494,9 @@
 
         .hero-card-wrap {
           grid-column: 2;
-          grid-row: 2;
+          grid-row: 1 / span 2;
           width: 100%;
-          align-self: center;
+          align-self: start;
         }
 
         .hero-card-wrap .orbit,
