@@ -1811,6 +1811,21 @@
           white-space: nowrap;
         }
 
+        .render-preview-meta {
+          display: grid !important;
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 8px;
+          padding-bottom: 8px !important;
+          font-size: 0.65rem !important;
+          line-height: 1.35;
+        }
+
+        .render-preview-meta__status {
+          align-self: start;
+          font-size: 0.6rem;
+          white-space: nowrap;
+        }
+
         .skill-card__demo-flow {
           flex-direction: row;
           align-items: center;
@@ -2323,9 +2338,9 @@
                   告别传统实景摄影昂贵而漫长的等待。采用高精度 C4D 建模，配合 Octane 与 Redshift 渲染器打造极富科技感、高细节度的质感材质，在虚拟世界中重塑光影美学。
                 </p>
                 <div class="skill-card__demo">
-                  <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);color:var(--accent);font-weight:900;font-size:0.9rem;">
+                  <div class="render-preview-meta" style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);color:var(--accent);font-weight:900;font-size:0.9rem;">
                     <span>Octane Live Viewer 实时渲染预览</span>
-                    <span style="color:#71717a;">60 fps 视差对齐</span>
+                    <span class="render-preview-meta__status" style="color:#71717a;">60 fps 视差对齐</span>
                   </div>
                   <div class="skill-card__demo-split">
                     <div style="padding:18px;border-radius:18px;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);text-align:center;">
