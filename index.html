@@ -1759,7 +1759,38 @@
         }
 
         .about-grid {
+          display: flex;
+          flex-direction: column;
           gap: 26px;
+        }
+
+        .about-copy {
+          display: contents;
+        }
+
+        .about-copy > .eyebrow {
+          order: 1;
+          align-self: flex-start;
+        }
+
+        .about-copy > h2 {
+          order: 3;
+        }
+
+        .about-copy > p {
+          order: 4;
+        }
+
+        .about-copy > .about-quote {
+          order: 5;
+        }
+
+        .about-copy > .stats {
+          order: 6;
+        }
+
+        .about-copy > .tool-badges {
+          order: 7;
         }
 
         .about-quote {
@@ -1791,7 +1822,7 @@
         }
 
         .about-card {
-          order: -1;
+          order: 2;
           display: flex;
           flex-direction: column;
           gap: 8px;
@@ -2331,7 +2362,7 @@
                 <img src="./assets/profile/about-portrait.jpg" alt="关于我人像照片" />
                 <div class="about-card__status">
                   <div>
-                    <strong>当前状态: 开放合作 / 全职机会</strong>
+                    <strong>当前状态: 全职机会 / 开放合作</strong>
                     <span>时区: 北京 UTC +8</span>
                   </div>
                   <div class="dot" aria-hidden="true"></div>
