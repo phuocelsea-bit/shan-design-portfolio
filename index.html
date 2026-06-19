@@ -1371,19 +1371,29 @@
         }
 
         .hero__layout {
-          grid-template-columns: 1fr;
-          gap: 24px;
+          grid-template-columns: minmax(0, 1.18fr) minmax(118px, 0.82fr);
+          gap: 18px 14px;
+          align-items: start;
         }
 
         .hero__left {
-          max-width: 100%;
+          display: contents;
+        }
+
+        .hero__left > .eyebrow {
+          grid-column: 1 / -1;
+          grid-row: 1;
+          justify-self: start;
         }
 
         .hero__title {
-          margin-top: 18px;
-          max-width: 8.8ch;
-          font-size: clamp(2.15rem, 8.7vw, 3.25rem);
-          line-height: 1.14;
+          grid-column: 1;
+          grid-row: 2;
+          align-self: center;
+          margin: 0;
+          max-width: none;
+          font-size: clamp(1.86rem, 7.9vw, 2.7rem);
+          line-height: 1.13;
           letter-spacing: -0.01em;
         }
 
@@ -1398,14 +1408,19 @@
         }
 
         .hero__lead {
-          margin-top: 18px;
+          grid-column: 1 / -1;
+          grid-row: 3;
+          margin-top: 2px;
           max-width: 100%;
           font-size: 0.94rem;
           line-height: 1.72;
         }
 
         .hero__buttons {
+          grid-column: 1 / -1;
+          grid-row: 4;
           gap: 12px;
+          margin-top: 4px;
         }
 
         .button-primary,
@@ -1416,37 +1431,42 @@
         }
 
         .hero__facts {
+          grid-column: 1 / -1;
+          grid-row: 5;
           gap: 8px;
-          margin-top: 22px;
+          margin-top: 4px;
           padding-top: 18px;
           font-size: 0.88rem;
         }
 
+        .hero-card-wrap {
+          grid-column: 2;
+          grid-row: 2;
+          width: 100%;
+          align-self: stretch;
+        }
+
+        .hero-card-wrap .orbit,
+        .hero-card__star,
+        .hero-card__status {
+          display: none;
+        }
+
         .hero-card {
           width: 100%;
+          height: 100%;
           min-height: 0;
-          padding: 12px;
-          border-radius: 26px;
+          padding: 5px;
+          border-radius: 20px;
+          background: rgba(20, 20, 20, 0.72);
         }
 
         .hero-card__image {
-          min-height: 340px;
-          border-radius: 20px;
-        }
-
-        .hero-card__star {
-          top: 34px;
-          right: 24px;
-          width: 22px;
-          height: 22px;
-        }
-
-        .hero-card__status {
-          left: 14px;
-          right: 14px;
-          bottom: 14px;
-          padding: 12px 14px;
-          font-size: 0.82rem;
+          display: block;
+          height: clamp(220px, 60vw, 300px);
+          min-height: 0;
+          border-radius: 15px;
+          object-position: 52% top;
         }
 
         .strip {
@@ -1507,14 +1527,14 @@
         }
 
         .gallery-card {
-          width: 68vw;
-          height: 160px;
-          flex-basis: 68vw;
-          border-radius: 20px;
+          width: clamp(176px, 52vw, 238px);
+          height: 116px;
+          flex-basis: clamp(176px, 52vw, 238px);
+          border-radius: 16px;
         }
 
         .gallery-card--tall {
-          height: 196px;
+          height: 138px;
         }
 
         .video-section {
