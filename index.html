@@ -761,6 +761,38 @@
         border: 1px solid rgba(255, 255, 255, 0.06);
       }
 
+      .commerce-demo {
+        padding: 18px;
+        border-radius: 22px;
+        background: #060606;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        font-family: Consolas, monospace;
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      .commerce-demo__label {
+        margin-bottom: 6px;
+        color: #71717a;
+      }
+
+      .commerce-demo__row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 20px;
+      }
+
+      .commerce-demo__row + .commerce-demo__row {
+        margin-top: 5px;
+      }
+
+      .commerce-demo__result {
+        color: var(--accent);
+        text-align: right;
+        white-space: nowrap;
+      }
+
       .skill-card__demo-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1402,7 +1434,7 @@
           align-self: center;
           margin: 0;
           max-width: none;
-          font-size: clamp(1.86rem, 7.9vw, 2.7rem);
+          font-size: clamp(1.48rem, 6.15vw, 2.05rem);
           line-height: 1.13;
           letter-spacing: -0.01em;
         }
@@ -1410,6 +1442,11 @@
         .hero__title-line {
           display: inline;
           white-space: normal;
+        }
+
+        .hero__title-line:first-child {
+          display: block;
+          white-space: nowrap;
         }
 
         .hero__title .accent {
@@ -1491,23 +1528,29 @@
         }
 
         .tool-card {
-          width: 92px;
-          flex-basis: 92px;
-          padding: 11px 8px 10px;
-          border-radius: 18px;
+          width: 62px;
+          flex-basis: 62px;
+          padding: 7px 5px 8px;
+          border-radius: 14px;
+        }
+
+        .strip__track {
+          gap: 8px;
         }
 
         .tool-card__icon {
-          height: 46px;
+          height: 31px;
         }
 
         .tool-card__icon img {
-          max-width: 38px;
-          max-height: 38px;
+          max-width: 28px;
+          max-height: 28px;
         }
 
         .tool-card__name {
-          font-size: 0.72rem;
+          margin-top: 6px;
+          font-size: 0.56rem;
+          line-height: 1.2;
         }
 
         .gallery-section {
@@ -1520,7 +1563,12 @@
 
         .section-head h2,
         .resume-block h2,
-        .skills-intro h2,
+        .skills-intro h2 {
+          font-size: clamp(1.55rem, 6.6vw, 2rem) !important;
+          line-height: 1.14;
+          letter-spacing: -0.01em;
+        }
+
         .about-copy h2,
         .contact-hero h2 {
           font-size: clamp(2rem, 8.4vw, 2.9rem) !important;
@@ -1627,6 +1675,32 @@
           border-radius: 16px;
         }
 
+        .commerce-demo {
+          padding: 13px 12px;
+          border-radius: 15px;
+          font-size: 0.68rem;
+          line-height: 1.48;
+        }
+
+        .commerce-demo__label {
+          margin-bottom: 8px;
+          font-size: 0.68rem;
+        }
+
+        .commerce-demo__row {
+          grid-template-columns: minmax(0, 1fr) 102px;
+          gap: 8px;
+        }
+
+        .commerce-demo__row + .commerce-demo__row {
+          margin-top: 8px;
+        }
+
+        .commerce-demo__result {
+          font-size: 0.64rem;
+          white-space: nowrap;
+        }
+
         .skill-card__demo-grid,
         .skill-card__demo-split {
           grid-template-columns: 1fr;
@@ -1662,9 +1736,27 @@
         }
 
         .stats {
-          grid-template-columns: 1fr;
-          gap: 12px;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 8px;
           margin-top: 20px;
+        }
+
+        .stat-card {
+          min-width: 0;
+          padding: 13px 5px 12px;
+          border-radius: 16px;
+        }
+
+        .stat-card strong {
+          font-size: clamp(1.55rem, 7vw, 2rem);
+          line-height: 1;
+        }
+
+        .stat-card span {
+          margin-top: 7px;
+          font-size: 0.58rem;
+          line-height: 1.35;
+          letter-spacing: 0.02em;
         }
 
         .about-card {
@@ -2114,11 +2206,11 @@
                   5 年专注于跨境出海电商主图、A+详情页、全套视觉手册策划。深入钻研欧美人群消费心理，将产品价值转化为极高溢价、兼具品牌感与超凡销售力的数字画面。
                 </p>
                 <div class="skill-card__demo">
-                  <div style="padding:18px;border-radius:22px;background:#060606;border:1px solid rgba(255,255,255,0.06);font-family:Consolas,monospace;font-size:0.95rem;line-height:1.8;">
-                    <div style="color:#71717a;">// 跨境高转化主图像素对齐</div>
-                    <div style="display:flex;justify-content:space-between;gap:20px;"><span>1. 钢笔高精抠图 & 光影重构</span><strong style="color:var(--accent);">[100% 精细]</strong></div>
-                    <div style="display:flex;justify-content:space-between;gap:20px;"><span>2. 欧美本土化模特背景融合</span><strong style="color:var(--accent);">[无缝缝合]</strong></div>
-                    <div style="display:flex;justify-content:space-between;gap:20px;"><span>3. 英文痛点卖点层级排版</span><strong style="color:var(--accent);">[Linear 极简风]</strong></div>
+                  <div class="commerce-demo">
+                    <div class="commerce-demo__label">// 跨境高转化主图像素对齐</div>
+                    <div class="commerce-demo__row"><span>1. 钢笔高精抠图 & 光影重构</span><strong class="commerce-demo__result">[100% 精细]</strong></div>
+                    <div class="commerce-demo__row"><span>2. 欧美本土化模特背景融合</span><strong class="commerce-demo__result">[无缝缝合]</strong></div>
+                    <div class="commerce-demo__row"><span>3. 英文痛点卖点层级排版</span><strong class="commerce-demo__result">[Linear 极简风]</strong></div>
                   </div>
                 </div>
                 <div class="skill-card__tags">
