@@ -1703,18 +1703,49 @@
 
         .skill-card__demo-grid,
         .skill-card__demo-split {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .skill-card__demo-grid > div {
+          padding: 9px 7px !important;
+          border-radius: 11px !important;
+          font-size: 0.67rem;
+          line-height: 1.25;
+        }
+
+        .skill-card__demo-split > div {
+          padding: 9px 5px !important;
+          border-radius: 11px !important;
+        }
+
+        .skill-card__demo-split > div > div:first-child {
+          font-size: 0.64rem !important;
+        }
+
+        .skill-card__demo-split > div > div:last-child {
+          margin-top: 3px !important;
+          font-size: clamp(0.72rem, 3.3vw, 0.88rem) !important;
+          white-space: nowrap;
         }
 
         .skill-card__demo-flow {
-          flex-direction: column;
-          align-items: stretch;
-          gap: 10px;
+          flex-direction: row;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .skill-card__demo-flow > div:not(.flow-line) {
+          flex: 0 0 auto;
+          padding: 8px 6px !important;
+          border-radius: 10px !important;
+          font-size: 0.62rem;
+          white-space: nowrap;
         }
 
         .flow-line {
-          width: 100%;
-          min-width: 0;
+          width: auto;
+          min-width: 5px;
         }
 
         .skill-card__tags {
