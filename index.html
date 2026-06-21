@@ -1247,6 +1247,33 @@
         100% { transform: translateX(0); }
       }
 
+      @keyframes galleryBMobile {
+        0% { transform: translateX(calc(-50% - 4px)); }
+        100% { transform: translateX(0); }
+      }
+
+      @keyframes galleryBFour {
+        0% { transform: translateX(calc(-50% - 9px)); }
+        100% { transform: translateX(0); }
+      }
+
+      @media (min-width: 769px) {
+        .gallery-row:nth-child(2) {
+          display: flex;
+          align-items: center;
+        }
+
+        .gallery-row:nth-child(2) .gallery-card {
+          width: calc((var(--frame) - 44px) / 3);
+          flex-basis: calc((var(--frame) - 44px) / 3);
+          aspect-ratio: 21 / 9;
+        }
+
+        .gallery-row__track--b {
+          animation-name: galleryBFour;
+        }
+      }
+
       @media (max-width: 1400px) {
         :root {
           --frame: min(100vw - 32px, 1440px);
@@ -1618,6 +1645,23 @@
         .gallery-card--tall {
           height: auto;
           aspect-ratio: 1 / 1;
+        }
+
+        .gallery-row:nth-child(2) {
+          min-height: 83px;
+          display: flex;
+          align-items: center;
+        }
+
+        .gallery-row:nth-child(2) .gallery-card {
+          width: calc((var(--frame) - 12px) / 2);
+          flex-basis: calc((var(--frame) - 12px) / 2);
+          aspect-ratio: 21 / 9;
+        }
+
+        .gallery-row__track--b {
+          animation-name: galleryBMobile;
+          animation-duration: 34s;
         }
 
         .video-section {
@@ -2175,15 +2219,14 @@
               </div>
               <div class="gallery-row">
                 <div class="gallery-row__track gallery-row__track--b">
-                  <div class="gallery-card"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 3" /></div>
                   <div class="gallery-card"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
                   <div class="gallery-card"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img src="./assets/projects/project-3.png" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 4" /></div>
                   <div class="gallery-card"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
                   <div class="gallery-card"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 3" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
+                  <div class="gallery-card"><img src="./assets/projects/project-3.png" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 4" /></div>
                 </div>
               </div>
             </div>
