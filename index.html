@@ -519,7 +519,7 @@
       }
 
       .gallery-row__track--a {
-        animation: galleryA 44s linear infinite;
+        animation: galleryAFive 48s linear infinite;
       }
 
       .gallery-row__track--b {
@@ -1242,6 +1242,16 @@
         100% { transform: translateX(-33.3333%); }
       }
 
+      @keyframes galleryAFive {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50% - 9px)); }
+      }
+
+      @keyframes galleryAFiveMobile {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50% - 4px)); }
+      }
+
       @keyframes galleryB {
         0% { transform: translateX(-33.3333%); }
         100% { transform: translateX(0); }
@@ -1667,6 +1677,10 @@
         .gallery-row__track--b {
           animation-name: galleryBMobile;
           animation-duration: 34s;
+        }
+
+        .gallery-row__track--a {
+          animation-name: galleryAFiveMobile;
         }
 
         .video-section {
@@ -2211,15 +2225,16 @@
             <div class="gallery-wrap">
               <div class="gallery-row">
                 <div class="gallery-row__track gallery-row__track--a">
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-3.jpg" alt="作品展示 3" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-3.jpg" alt="作品展示 3" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/project-3.jpg" alt="作品展示 3" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-1.jpg" alt="作品展示 1" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-2.jpg" alt="作品展示 2" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-3.jpg" alt="作品展示 3" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-4.jpg" alt="作品展示 4" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-5.jpg" alt="作品展示 5" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-1.jpg" alt="作品展示 1" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-2.jpg" alt="作品展示 2" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-3.jpg" alt="作品展示 3" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-4.jpg" alt="作品展示 4" /></div>
+                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-5.jpg" alt="作品展示 5" /></div>
                 </div>
               </div>
               <div class="gallery-row">
