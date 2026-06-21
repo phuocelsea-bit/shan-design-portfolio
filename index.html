@@ -1258,6 +1258,11 @@
       }
 
       @media (min-width: 769px) {
+        .gallery-row:nth-child(1) .gallery-card {
+          width: calc((var(--frame) - 62px) / 4);
+          flex-basis: calc((var(--frame) - 62px) / 4);
+        }
+
         .gallery-row:nth-child(2) {
           display: flex;
           align-items: center;
