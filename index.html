@@ -528,7 +528,8 @@
 
       .gallery-card {
         width: 420px;
-        height: 270px;
+        height: auto;
+        aspect-ratio: 21 / 9;
         flex: 0 0 420px;
         border-radius: 30px;
         overflow: hidden;
@@ -537,7 +538,8 @@
       }
 
       .gallery-card--tall {
-        height: 330px;
+        height: auto;
+        aspect-ratio: 1 / 1;
       }
 
       .gallery-card img {
@@ -1309,12 +1311,12 @@
 
         .gallery-card {
           width: 320px;
-          height: 210px;
+          height: auto;
           flex-basis: 320px;
         }
 
         .gallery-card--tall {
-          height: 250px;
+          height: auto;
         }
 
         .video-grid,
@@ -1607,13 +1609,15 @@
 
         .gallery-card {
           width: clamp(112px, 32vw, 140px);
-          height: 78px;
+          height: auto;
+          aspect-ratio: 21 / 9;
           flex-basis: clamp(112px, 32vw, 140px);
           border-radius: 12px;
         }
 
         .gallery-card--tall {
-          height: 94px;
+          height: auto;
+          aspect-ratio: 1 / 1;
         }
 
         .video-section {
