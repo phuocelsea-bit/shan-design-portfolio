@@ -232,7 +232,8 @@
       .hero {
         min-height: 1080px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        padding-top: 18px;
         padding-bottom: 60px;
       }
 
@@ -1233,8 +1234,8 @@
       }
 
       @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
       }
 
       @keyframes galleryA {
@@ -1268,6 +1269,11 @@
       }
 
       @media (min-width: 769px) {
+        .hero {
+          min-height: calc(100vh - 124px);
+          padding-top: 8px;
+        }
+
         .gallery-row:nth-child(1) .gallery-card {
           width: calc((var(--frame) - 62px) / 4);
           flex-basis: calc((var(--frame) - 62px) / 4);
@@ -1782,6 +1788,10 @@
           font-size: 0.94rem;
         }
 
+        .skills-intro p {
+          line-height: 1.55;
+        }
+
         .resume-card__period {
           font-size: 0.68rem;
           letter-spacing: 0.05em;
@@ -2239,14 +2249,18 @@
               </div>
               <div class="gallery-row">
                 <div class="gallery-row__track gallery-row__track--b">
-                  <div class="gallery-card"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.png" alt="作品展示 3" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 4" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.png" alt="作品展示 3" /></div>
-                  <div class="gallery-card"><img src="./assets/projects/project-3.jpg" alt="作品展示 4" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/1.png" alt="作品展示 1" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/2.png" alt="作品展示 2" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/3.png" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/4.png" alt="作品展示 4" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/5.png" alt="作品展示 5" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/6.png" alt="作品展示 6" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/1.png" alt="作品展示 1" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/2.png" alt="作品展示 2" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/3.png" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/4.png" alt="作品展示 4" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/5.png" alt="作品展示 5" /></div>
+                  <div class="gallery-card"><img src="./assets/custom/6.png" alt="作品展示 6" /></div>
                 </div>
               </div>
             </div>
@@ -2263,10 +2277,19 @@
             <div class="video-grid">
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/videos/video-1.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
+                  <video src="./assets/custom/power-bank.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>01</strong>
+                  <span>充电宝</span>
+                </div>
+              </article>
+              <article class="video-card">
+                <div class="video-card__media">
+                  <video src="./assets/videos/video-1.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
+                </div>
+                <div class="video-card__meta">
+                  <strong>02</strong>
                   <span>车载支架</span>
                 </div>
               </article>
@@ -2275,17 +2298,8 @@
                   <video src="./assets/videos/video-2.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
-                  <strong>02</strong>
-                  <span>鼠标</span>
-                </div>
-              </article>
-              <article class="video-card">
-                <div class="video-card__media">
-                  <video src="./assets/videos/video-3.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
-                </div>
-                <div class="video-card__meta">
                   <strong>03</strong>
-                  <span>人物叙事</span>
+                  <span>鼠标</span>
                 </div>
               </article>
             </div>
