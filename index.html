@@ -445,6 +445,7 @@
         width: max-content;
         gap: 18px;
         animation: marquee 32s linear infinite;
+        will-change: transform;
       }
 
       .tool-card {
@@ -517,6 +518,7 @@
         display: flex;
         width: max-content;
         gap: 18px;
+        will-change: transform;
       }
 
       .gallery-row__track--a {
@@ -577,6 +579,17 @@
         height: auto;
         background: #000;
         object-fit: contain;
+      }
+
+      .strip,
+      .gallery-section,
+      .video-section,
+      .resume-section,
+      .skills-section,
+      .about-section,
+      .contact-section {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 960px;
       }
 
       .video-card__meta {
@@ -2172,7 +2185,7 @@
                 <div class="orbit"></div>
                 <div class="orbit orbit--reverse"></div>
                 <div class="hero-card">
-                  <img class="hero-card__image" src="./assets/shan-portrait.jpg" alt="陈姗人像照片" />
+                  <img class="hero-card__image" src="./assets/shan-portrait.jpg" alt="陈姗人像照片" fetchpriority="high" decoding="async" />
                   <svg class="hero-card__star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3z"></path>
                   </svg>
@@ -2193,30 +2206,30 @@
             <p class="strip__title">精通的顶尖技术栈 & 跨境电商主流平台生态</p>
             <div class="strip__viewport">
               <div class="strip__track">
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/1.png" alt="ChatGPT" /></div><div class="tool-card__name">ChatGPT</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/2.png" alt="Liblib AI" /></div><div class="tool-card__name">Liblib AI</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/3.png" alt="Gemini" /></div><div class="tool-card__name">Gemini</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/4.png" alt="Photoshop" /></div><div class="tool-card__name">Photoshop</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/5.png" alt="Illustrator" /></div><div class="tool-card__name">Illustrator</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/6.png" alt="Cinema 4D" /></div><div class="tool-card__name">Cinema 4D</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/7.png" alt="Octane" /></div><div class="tool-card__name">Octane</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/8.png" alt="Redshift" /></div><div class="tool-card__name">Redshift</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/9.png" alt="即梦 AI" /></div><div class="tool-card__name">即梦 AI</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/10.png" alt="剪映" /></div><div class="tool-card__name">剪映</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/11.png" alt="Lovart" /></div><div class="tool-card__name">Lovart</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/12.png" alt="LibTV" /></div><div class="tool-card__name">LibTV</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/1.png" alt="ChatGPT" /></div><div class="tool-card__name">ChatGPT</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/2.png" alt="Codex智能体" /></div><div class="tool-card__name">Codex智能体</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/3.png" alt="Gemini" /></div><div class="tool-card__name">Gemini</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/4.png" alt="Photoshop" /></div><div class="tool-card__name">Photoshop</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/5.png" alt="Illustrator" /></div><div class="tool-card__name">Illustrator</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/6.png" alt="Cinema 4D" /></div><div class="tool-card__name">Cinema 4D</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/7.png" alt="Octane" /></div><div class="tool-card__name">Octane</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/8.png" alt="Redshift" /></div><div class="tool-card__name">Redshift</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/9.png" alt="即梦 AI" /></div><div class="tool-card__name">即梦 AI</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/10.png" alt="剪映" /></div><div class="tool-card__name">剪映</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/11.png" alt="Lovart" /></div><div class="tool-card__name">Lovart</div></div>
-                <div class="tool-card"><div class="tool-card__icon"><img src="./assets/logos/12.png" alt="LibTV" /></div><div class="tool-card__name">LibTV</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/1.png" alt="ChatGPT" /></div><div class="tool-card__name">ChatGPT</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/2.png" alt="Liblib AI" /></div><div class="tool-card__name">Liblib AI</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/3.png" alt="Gemini" /></div><div class="tool-card__name">Gemini</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/4.png" alt="Photoshop" /></div><div class="tool-card__name">Photoshop</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/5.png" alt="Illustrator" /></div><div class="tool-card__name">Illustrator</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/6.png" alt="Cinema 4D" /></div><div class="tool-card__name">Cinema 4D</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/7.png" alt="Octane" /></div><div class="tool-card__name">Octane</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/8.png" alt="Redshift" /></div><div class="tool-card__name">Redshift</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/9.png" alt="即梦 AI" /></div><div class="tool-card__name">即梦 AI</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/10.png" alt="剪映" /></div><div class="tool-card__name">剪映</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/11.png" alt="Lovart" /></div><div class="tool-card__name">Lovart</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/12.png" alt="LibTV" /></div><div class="tool-card__name">LibTV</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/1.png" alt="ChatGPT" /></div><div class="tool-card__name">ChatGPT</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/2.png" alt="Codex智能体" /></div><div class="tool-card__name">Codex智能体</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/3.png" alt="Gemini" /></div><div class="tool-card__name">Gemini</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/4.png" alt="Photoshop" /></div><div class="tool-card__name">Photoshop</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/5.png" alt="Illustrator" /></div><div class="tool-card__name">Illustrator</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/6.png" alt="Cinema 4D" /></div><div class="tool-card__name">Cinema 4D</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/7.png" alt="Octane" /></div><div class="tool-card__name">Octane</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/8.png" alt="Redshift" /></div><div class="tool-card__name">Redshift</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/9.png" alt="即梦 AI" /></div><div class="tool-card__name">即梦 AI</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/10.png" alt="剪映" /></div><div class="tool-card__name">剪映</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/11.png" alt="Lovart" /></div><div class="tool-card__name">Lovart</div></div>
+                <div class="tool-card"><div class="tool-card__icon"><img loading="lazy" decoding="async" src="./assets/logos/12.png" alt="LibTV" /></div><div class="tool-card__name">LibTV</div></div>
               </div>
             </div>
           </div>
@@ -2235,32 +2248,32 @@
             <div class="gallery-wrap">
               <div class="gallery-row">
                 <div class="gallery-row__track gallery-row__track--a">
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-1.jpg" alt="作品展示 1" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-2.jpg" alt="作品展示 2" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-3.jpg" alt="作品展示 3" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-4.jpg" alt="作品展示 4" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-5.jpg" alt="作品展示 5" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-1.jpg" alt="作品展示 1" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-2.jpg" alt="作品展示 2" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-3.jpg" alt="作品展示 3" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-4.jpg" alt="作品展示 4" /></div>
-                  <div class="gallery-card gallery-card--tall"><img src="./assets/projects/gallery-5.jpg" alt="作品展示 5" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-1.jpg" alt="作品展示 1" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-2.jpg" alt="作品展示 2" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-3.jpg" alt="作品展示 3" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-4.jpg" alt="作品展示 4" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-5.jpg" alt="作品展示 5" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-1.jpg" alt="作品展示 1" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-2.jpg" alt="作品展示 2" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-3.jpg" alt="作品展示 3" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-4.jpg" alt="作品展示 4" /></div>
+                  <div class="gallery-card gallery-card--tall"><img loading="lazy" decoding="async" src="./assets/projects/gallery-5.jpg" alt="作品展示 5" /></div>
                 </div>
               </div>
               <div class="gallery-row">
                 <div class="gallery-row__track gallery-row__track--b">
-                  <div class="gallery-card"><img src="./assets/custom/1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/3.png" alt="作品展示 3" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/4.png" alt="作品展示 4" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/5.png" alt="作品展示 5" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/6.png" alt="作品展示 6" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/1.png" alt="作品展示 1" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/2.png" alt="作品展示 2" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/3.png" alt="作品展示 3" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/4.png" alt="作品展示 4" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/5.png" alt="作品展示 5" /></div>
-                  <div class="gallery-card"><img src="./assets/custom/6.png" alt="作品展示 6" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/1.png" alt="作品展示 1" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/2.png" alt="作品展示 2" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/3.png" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/4.png" alt="作品展示 4" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/5.png" alt="作品展示 5" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/6.png" alt="作品展示 6" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/1.png" alt="作品展示 1" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/2.png" alt="作品展示 2" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/3.png" alt="作品展示 3" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/4.png" alt="作品展示 4" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/5.png" alt="作品展示 5" /></div>
+                  <div class="gallery-card"><img loading="lazy" decoding="async" src="./assets/custom/6.png" alt="作品展示 6" /></div>
                 </div>
               </div>
             </div>
@@ -2277,7 +2290,7 @@
             <div class="video-grid">
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/custom/power-bank.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
+                  <video src="./assets/custom/power-bank.mp4" controls preload="none" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>01</strong>
@@ -2286,7 +2299,7 @@
               </article>
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/videos/video-1.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
+                  <video src="./assets/videos/video-1.mp4" controls preload="none" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>02</strong>
@@ -2295,7 +2308,7 @@
               </article>
               <article class="video-card">
                 <div class="video-card__media">
-                  <video src="./assets/videos/video-2.mp4" controls preload="metadata" playsinline webkit-playsinline muted></video>
+                  <video src="./assets/videos/video-2.mp4" controls preload="none" playsinline webkit-playsinline muted></video>
                 </div>
                 <div class="video-card__meta">
                   <strong>03</strong>
@@ -2547,7 +2560,7 @@
               </div>
 
               <div class="about-card">
-                <img src="./assets/profile/about-portrait.jpg" alt="关于我人像照片" />
+                <img loading="lazy" decoding="async" src="./assets/profile/about-portrait.jpg" alt="关于我人像照片" />
                 <div class="about-card__status">
                   <div>
                     <strong>当前状态: 全职机会 / 开放合作</strong>
